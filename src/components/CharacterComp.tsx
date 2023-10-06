@@ -7,30 +7,33 @@ export default function CharacterComp(prop: CharacterCompProps) {
   const { char } = prop;
   return (
     char && (
-      <div className="">
-        <a
-          href="#"
-          className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-        >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {char.name}
-          </h5>
-          <ol>
-            <li className="font-normal text-gray-700 dark:text-gray-400">
-              <p className="font-bold">Films</p>
-              {char.films.map((film) => (
-                <p key={film}>{film}</p>
-              ))}
-            </li>
-            <li className="font-normal text-gray-700 dark:text-gray-400 mt-5">
-              <p className="font-bold">Starships</p>
-              {char.starships.map((starship) => (
-                <p key={starship}>{starship}</p>
-              ))}
-            </li>
-          </ol>
-        </a>
-      </div>
+      <li className="py-3 sm:py-4">
+        <div className="flex items-center justify-between space-x-4">
+            <p className="font-semibold">{char.name}</p>
+            <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+              Height: {char.height}cm
+            </p>
+            <p className="truncate">Gender: {char.gender}</p>
+            {/* <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                Films
+              </p>
+              <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                {char.films.map((film) => (
+                  <p key={film}>{film}</p>
+                ))}
+              </p> */}
+          {/* <div className="flex-1 min-w-0">
+              <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                Starships
+              </p>
+              <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                {char.starships.map((starship) => (
+                  <p key={starship}>{starship}</p>
+                ))}
+              </p>
+            </div> */}
+        </div>
+      </li>
     )
   );
 }
