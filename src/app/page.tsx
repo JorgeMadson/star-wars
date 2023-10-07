@@ -92,6 +92,9 @@ export default function Home() {
                 <th scope="col" className="px-6 py-3">
                   Gender
                 </th>
+                <th scope="col" className="px-6 py-3">
+                    Action
+                </th>
               </tr>
             </thead>
             <tbody>
