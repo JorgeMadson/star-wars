@@ -29,13 +29,13 @@ export default async function Page({params: { id },}: {params: { id: string };})
         <p><span className="font-semibold">Gender: </span>{data.gender}</p>
         <p><span className="font-semibold">Homeworld: </span>{data.homeworld}</p>
         <p><span className="font-semibold">Films: </span></p>
-        <ul className="ml-5">{data.films.map(i => <li className="list-disc">{i}</li>)}</ul>
+        <ul className="ml-5">{data.films.map(i => <li key={i} className="list-disc">{i}</li>)}</ul>
         <p><span className="font-semibold">Species: </span></p>
-        <ul className="ml-5">{data.species.map(i => <li className="list-disc">{i}</li>)}</ul>
+        <ul className="ml-5">{data.species.map(i => <li key={i} className="list-disc">{i}</li>)}</ul>
         <p><span className="font-semibold">Vehicles: </span></p>
-        <ul className="ml-5">{data.vehicles.map(i => <li className="list-disc">{i}</li>)}</ul>
+        <ul className="ml-5">{data.vehicles.map(i => <li key={i} className="list-disc">{i}</li>)}</ul>
         <p><span className="font-semibold">Starships: </span></p>
-        <ul className="ml-5">{data.starships.map(i => <li className="list-disc">{i}</li>)}</ul>
+        <ul className="ml-5">{data.starships.map(i => <li key={i} className="list-disc">{i}</li>)}</ul>
         <p><span className="font-semibold">Created: </span>{data.created}</p>
         <p><span className="font-semibold">Edited: </span>{data.edited}</p>
         <p><span className="font-semibold">Url: </span>{data.url}</p>
