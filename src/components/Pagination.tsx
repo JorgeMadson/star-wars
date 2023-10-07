@@ -18,9 +18,8 @@ export default function Pagination(props: PaginationProps) {
         <li>
           {previousPageUrl ? (
             <a
-              href="#"
               onClick={() => onPageChange(previousPageUrl)}
-              className="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              className="cursor-pointer flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               Previous
             </a>
@@ -36,7 +35,6 @@ export default function Pagination(props: PaginationProps) {
             .map((_, page) => (
               <li key={page}>
                 <a
-                  href="#"
                   onClick={() =>
                     onPageChange(
                       `https://swapi.dev/api/people/?page=${page + 1}`
@@ -45,7 +43,7 @@ export default function Pagination(props: PaginationProps) {
                   className={`flex items-center justify-center px-3 h-8 leading-tight dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white ${
                     pageNumber === page + 1
                       ? "bg-blue-300 text-gray-500 hover:bg-blue-400 hover:text-gray-700"
-                      : "text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
+                      : "cursor-pointer text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 "
                   }`}
                 >
                   {page + 1}
@@ -56,9 +54,8 @@ export default function Pagination(props: PaginationProps) {
         <li>
           {nextPageUrl ? (
             <a
-              href="#"
               onClick={() => onPageChange(nextPageUrl)}
-              className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              className="cursor-pointer flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               Next
             </a>
