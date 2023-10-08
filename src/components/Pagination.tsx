@@ -13,7 +13,7 @@ export default function Pagination(props: PaginationProps) {
     props;
 
   return (
-    <nav aria-label="Page navigation example">
+    <nav className="flex justify-center" aria-label="Page navigation">
       <ul className="inline-flex -space-x-px text-sm">
         <li>
           {previousPageUrl ? (
