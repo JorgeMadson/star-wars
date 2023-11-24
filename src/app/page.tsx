@@ -3,7 +3,7 @@ import { CharacterType } from "@/types/CharacterType";
 import CharacterItem from "@/components/CharacterItem";
 import { Suspense } from "react";
 
-export async function fetchStarWarsData() {
+async function fetchStarWarsData() {
   const response = await fetch('https://swapi.dev/api/people/', {
     next :{
       revalidate: 3600,
