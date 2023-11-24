@@ -5,16 +5,16 @@ export function CharacterList({ children }: { children: React.ReactNode; }) {
       <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <tr>
           <th scope="col" className="px-6 py-3">
-            Name
+            Nome
           </th>
           <th scope="col" className="px-6 py-3">
-            Height
+            Altura
           </th>
           <th scope="col" className="px-6 py-3">
-            Gender
+            Gênero
           </th>
           <th scope="col" className="px-6 py-3">
-            Action
+            Ação
           </th>
         </tr>
       </thead>

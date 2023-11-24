@@ -1,9 +1,14 @@
 import { CharacterList } from "../components/CharacterList";
 import { CharacterType } from "@/types/CharacterType";
 import CharacterItem from "@/components/CharacterItem";
+import { Suspense } from "react";
 
 export async function fetchStarWarsData() {
-  const response = await fetch('https://swapi.dev/api/people/')
+  const response = await fetch('https://swapi.dev/api/people/', {
+    next :{
+      revalidate: 3600,
+    }
+  })
   const peopleData = await response.json()
   return peopleData;
 }
@@ -22,7 +27,9 @@ export default async function Home() {
           <CharacterList>
             {starWarsData.results &&
               starWarsData.results.map((person: CharacterType) => (
+                <Suspense key={person.name} fallback={<div>Loading...</div>}>
                 <CharacterItem key={person.name} char={person} />
+                </Suspense>
               ))}
           </CharacterList>
         </div>
